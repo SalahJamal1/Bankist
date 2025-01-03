@@ -526,6 +526,12 @@ body {
   line-height: 30.4px;
   text-wrap: nowrap;
 }
+
+.footer_logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer_logo {
   display: block;
   height: 5rem;
