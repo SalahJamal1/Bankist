@@ -90,6 +90,15 @@ const revealSection = function (entries, observer) {
     });
   });
 };
+
+if (!('requestIdleCallback' in window)) {
+  window.requestIdleCallback = function (callback) {
+    return setTimeout(() => callback(), 1);
+  };
+  window.cancelIdleCallback = function (id) {
+    clearTimeout(id);
+  };
+}
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.2,
