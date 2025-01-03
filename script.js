@@ -102,10 +102,10 @@ sections.forEach(section => {
 const lazyLoad = function (entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.src = entry.target.dataset.src;
     entry.target.addEventListener('load', () => {
       entry.target.classList.remove('lazy-img');
     });
+    entry.target.src = entry.target.dataset.src;
     observer.unobserve(entry.target);
   });
 };

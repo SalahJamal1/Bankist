@@ -248,6 +248,7 @@ body {
 .section_1_card_img {
   max-width: 56.5rem;
   max-height: 33.9rem;
+  transition: all 1s;
 }
 
 .section_1_card_text_ball {
