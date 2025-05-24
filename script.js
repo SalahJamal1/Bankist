@@ -175,6 +175,7 @@ btnLeft.addEventListener('click', () => {
   activeSlide(currentSlide);
 });
 
+dot[0].classList.add('dot_active');
 dots.addEventListener('click', function (e) {
   if (e.target.classList.contains('dot')) {
     const slides = e.target.dataset.dot;
