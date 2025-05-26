@@ -127,21 +127,19 @@ const imgObserver = new IntersectionObserver(lazyLoad, {
 img.forEach(img => imgObserver.observe(img));
 
 opration_list.addEventListener('click', function (e) {
-  if (e.target.classList.contains('operations__tab')) {
-    const clicked = e.target.dataset.tab;
-    operations__tab.forEach(tab =>
-      tab.classList.remove('operations__tab_active')
-    );
-    document
-      .querySelector(`.operations__tab--${clicked}`)
-      .classList.add('operations__tab_active');
-    opration_content.forEach(content =>
-      content.classList.remove('opration_content_active')
-    );
-    document
-      .querySelector(`.opration_content--${clicked}`)
-      .classList.add('opration_content_active');
-  }
+  const clicked = e.target.closest('.operations__tab').dataset.tab;
+  operations__tab.forEach(tab =>
+    tab.classList.remove('operations__tab_active')
+  );
+  document
+    .querySelector(`.operations__tab--${clicked}`)
+    .classList.add('operations__tab_active');
+  opration_content.forEach(content =>
+    content.classList.remove('opration_content_active')
+  );
+  document
+    .querySelector(`.opration_content--${clicked}`)
+    .classList.add('opration_content_active');
 });
 
 section_3_slide.forEach((slide, i) => {

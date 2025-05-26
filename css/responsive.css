@@ -139,7 +139,6 @@
     overflow-y: hidden;
   }
   .account_form {
-    /* grid-template-columns: 1fr; */
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -152,5 +151,15 @@
   }
   .header_hero {
     max-width: 80%;
+  }
+  .operations__tab span {
+    display: none;
+  }
+  .operations__tab {
+    width: 40px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
