@@ -111,10 +111,10 @@ sections.forEach(section => {
 const lazyLoad = function (entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
+    entry.target.src = entry.target.dataset.src;
     entry.target.addEventListener('load', () => {
       entry.target.classList.remove('lazy-img');
     });
-    entry.target.src = entry.target.dataset.src;
     observer.unobserve(entry.target);
   });
 };
@@ -177,7 +177,8 @@ dot[0].classList.add('dot_active');
 dots.addEventListener('click', function (e) {
   if (e.target.classList.contains('dot')) {
     const slides = e.target.dataset.dot;
-    activeSlide(slides);
-    goToSlide(slides);
+    currentSlide = slides;
+    activeSlide(currentSlide);
+    goToSlide(currentSlide);
   }
 });

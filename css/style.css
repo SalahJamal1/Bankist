@@ -42,6 +42,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
+  position: absolute;
 }
 .nav__logo {
   height: 4.5rem;
@@ -86,6 +88,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 9.2rem;
+  padding-top: 12rem;
 }
 .header__text {
   padding-block: 10.7rem 19.991rem;
